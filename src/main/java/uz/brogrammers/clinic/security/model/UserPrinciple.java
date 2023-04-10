@@ -1,5 +1,5 @@
 package uz.brogrammers.clinic.security.model;
-
+/*
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import org.springframework.security.core.GrantedAuthority;
@@ -100,3 +100,4 @@ public class UserPrinciple implements UserDetails {
         return id != null ? id.hashCode() : 0;
     }
 }
+ */

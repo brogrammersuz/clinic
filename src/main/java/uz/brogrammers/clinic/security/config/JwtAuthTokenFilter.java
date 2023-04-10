@@ -1,5 +1,5 @@
 package uz.brogrammers.clinic.security.config;
-
+/*
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,3 +24,4 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
 
     }
 }
+*/
