@@ -1,20 +1,20 @@
-package uz.brogrammers.clinic.user.model.dto.request;
+package uz.brogrammers.clinic.referrer.model.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class UpdateUserRequest {
-    @NotNull
-    private Long id;
-    @NotNull
-    private String password;
+public class RegisterReferrerRequest {
+
     @NotNull
     private String firstName;
     @NotNull
     private String lastName;
     @NotNull
+    private String uniqueCode;
+    @NotNull
     private String phone;
     @NotNull
-    private Integer departmentId;
+    private Integer percentage;
+
 }

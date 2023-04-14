@@ -67,6 +67,6 @@ public class User {
     private String phone;
 
     @Column(name = "department_id", nullable = false)
-    private Long departmentId;
+    private Integer departmentId;
 
 }

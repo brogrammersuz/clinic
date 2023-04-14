@@ -6,15 +6,15 @@ import lombok.Data;
 @Data
 public class UserRegistrationRequest {
     @NotNull
-    String username;
+    private String username;
     @NotNull
-    String password;
+    private String password;
     @NotNull
-    String firstName;
+    private String firstName;
     @NotNull
-    String lastName;
+    private String lastName;
     @NotNull
-    String phone;
+    private String phone;
     @NotNull
-    Long departmentId;
+    private Integer departmentId;
 }
