@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class UpdateUserRequest {
     @NotNull
-    private Long id;
+    private Integer id;
     @NotNull
     private String password;
     @NotNull

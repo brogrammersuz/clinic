@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import uz.brogrammers.clinic.department.service.DepartmentService;
 import uz.brogrammers.clinic.user.mapper.UserMapper;
@@ -31,6 +32,7 @@ public class UserController {
 
     private final UserService userService;
     private final RoleService roleService;
+    private final PasswordEncoder passwordEncoder;
     private final DepartmentService departmentService;
 
     @GetMapping("/me")
@@ -78,7 +80,7 @@ public class UserController {
         User user = User.builder()
                 .status(UserStatus.ACTIVE)
                 .username(userRegistrationRequest.getUsername().trim())
-                //.password(passwordEncoder.encode(userRegistrationRequest.getPassword()))
+                .password(passwordEncoder.encode(userRegistrationRequest.getPassword()))
                 .firstName(firstName)
                 .lastName(lastName)
                 .roles(Collections.singleton(userRole))
@@ -119,7 +121,7 @@ public class UserController {
         User user = User.builder()
                 .status(UserStatus.ACTIVE)
                 .username(existingUser.getUsername().trim())
-                //.password(passwordEncoder.encode(request.getPassword()))
+                .password(passwordEncoder.encode(request.getPassword()))
                 .firstName(firstName)
                 .lastName(lastName)
                 .roles(existingUser.getRoles())
