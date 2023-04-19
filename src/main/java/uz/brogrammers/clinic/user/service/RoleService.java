@@ -13,7 +13,7 @@ public class RoleService {
     private final RoleRepository roleRepository;
 
     public Role findByName(RoleName name) {
-        return roleRepository.findByName(name.name())
+        return roleRepository.findByName(name)
                 .orElseThrow(() -> new RuntimeException("role by name " + name.name() + "not found"));
     }
 

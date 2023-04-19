@@ -26,7 +26,7 @@ public class JwtProvider {
                 .claim("isAdmin", userPrincipal.isAdmin())
                 .setIssuedAt(new Date())
                 .setExpiration(DateUtils.addHours(new Date(), 12))
-                .signWith(SignatureAlgorithm.ES512, jwtSecret)
+                .signWith(SignatureAlgorithm.HS512, jwtSecret)
                 .compact();
     }
 

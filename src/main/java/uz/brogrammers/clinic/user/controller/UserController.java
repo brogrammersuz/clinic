@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import uz.brogrammers.clinic.department.service.DepartmentService;
@@ -45,6 +47,8 @@ public class UserController {
 
     }
 
+    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/list")
     public List<UserResponse> findAll() {
         var usersList = userService.findAll();
@@ -98,6 +102,8 @@ public class UserController {
 
     }
 
+    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping(value = "/update")
     public ResponseEntity<?> update(@RequestBody UpdateUserRequest request) {
 
