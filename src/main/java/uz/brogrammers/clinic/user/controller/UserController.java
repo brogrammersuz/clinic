@@ -47,8 +47,8 @@ public class UserController {
 
     }
 
-    @Secured({"ROLE_ADMIN"})
-    @PreAuthorize("hasRole('ADMIN')")
+    @Secured({"ROLE_USER", "ROLE_ADMIN"})
+    @PreAuthorize("hasRole('USER') || hasRole('ADMIN')")
     @GetMapping("/list")
     public List<UserResponse> findAll() {
         var usersList = userService.findAll();
@@ -102,8 +102,8 @@ public class UserController {
 
     }
 
-    @Secured({"ROLE_ADMIN"})
-    @PreAuthorize("hasRole('ADMIN')")
+    @Secured({"ROLE_USER", "ROLE_ADMIN"})
+    @PreAuthorize("hasRole('USER') || hasRole('ADMIN')")
     @PutMapping(value = "/update")
     public ResponseEntity<?> update(@RequestBody UpdateUserRequest request) {
 

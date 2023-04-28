@@ -1,8 +1,10 @@
 package uz.brogrammers.clinic.department.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
@@ -10,6 +12,8 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "analysis")
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Analysis {
 
     @Id

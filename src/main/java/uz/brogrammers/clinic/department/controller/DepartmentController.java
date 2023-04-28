@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/departments")
+@RequestMapping("/api/department")
 public class DepartmentController {
 
     private final DepartmentService departmentService;

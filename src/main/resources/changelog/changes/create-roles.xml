@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1.0.0" author="hasan">
+    <changeSet id="1.0.1" author="hasan">
         <preConditions>
             <sqlCheck expectedResult="0">
                 SELECT COUNT(*) FROM roles WHERE name='ROLE_USER';

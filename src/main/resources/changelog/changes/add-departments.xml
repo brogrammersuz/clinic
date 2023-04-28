@@ -1,0 +1,98 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1.0.0" author="hasan">
+        <preConditions>
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM departments WHERE name='Лабаратория';
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="departments">
+            <column name="id" value="1"></column>
+            <column name="name" value="Лабаратория"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="2"></column>
+            <column name="name" value="Узи"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="3"></column>
+            <column name="name" value="Рентген"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="4"></column>
+            <column name="name" value="МРТ"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="5"></column>
+            <column name="name" value="МСКТ"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="6"></column>
+            <column name="name" value="Неврология"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="7"></column>
+            <column name="name" value="Уралогия"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="8"></column>
+            <column name="name" value="Гинекология"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="9"></column>
+            <column name="name" value="Хирургия"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="10"></column>
+            <column name="name" value="Траматология"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="11"></column>
+            <column name="name" value="Лор"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="12"></column>
+            <column name="name" value="Кардиоголия"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="13"></column>
+            <column name="name" value="Терапия"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="14"></column>
+            <column name="name" value="Ендакринология"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="15"></column>
+            <column name="name" value="Гастроэнтерология"></column>
+        </insert>
+
+        <insert tableName="departments">
+            <column name="id" value="16"></column>
+            <column name="name" value="Физотерапия"></column>
+        </insert>
+        <insert tableName="departments">
+            <column name="id" value="17"></column>
+            <column name="name" value="Регистратура"></column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
